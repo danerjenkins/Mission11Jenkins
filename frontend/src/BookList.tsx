@@ -2,32 +2,40 @@ import React, { useEffect, useState } from "react";
 import { Book } from "./Book";
 
 function BookList() {
+  //set the variables
   const [books, setBooks] = useState<Book[]>([]);
-
   const [pageSize, setPageSize] = useState<number>(5);
   const [pageNum, setPageNum] = useState<number>(1);
   const [totalBooks, setTotalBooks] = useState<number>(0);
   const [totalPages, setTotalPages] = useState<number>(0);
+  // default the order by to book id
   const [orderBy, setOrderBy] = useState<string>("BookID");
 
   useEffect(() => {
+    // Define an asynchronous function to fetch the books data from the API
     const fetchProjects = async () => {
+      // Make a GET request to the API with the current page size, page number, and order by parameters
       const response = await fetch(
         `http://localhost:5267/api/book/GetBooks?pageHowMany=${pageSize}&pageNum=${pageNum}&orderBy=${orderBy}`,
         {
-          credentials: "include",
+          credentials: "include", // Include credentials (cookies) in the request
         }
       );
+      // Parse the JSON response
       const data = await response.json();
+      // Update the state with the fetched books data
       setBooks(data.books);
+      // Update the total number of books
       setTotalBooks(data.totalBooks);
+      // Calculate and update the total number of pages
       setTotalPages(Math.ceil(totalBooks / pageSize));
     };
+    // Call the fetchProjects function to fetch the data
     fetchProjects();
-  }, [pageSize, pageNum, totalBooks, orderBy]);
+  }, [pageSize, pageNum, totalBooks, orderBy]); // Re-run this effect whenever pageSize, pageNum, totalBooks, or orderBy changes
   // set function to toggle sort
   const toggleSort = () => {
-    setOrderBy((prev) => (prev === "Title" ? "BookID" : "Title")); // if you're using Dynamic LINQ
+    setOrderBy((prev) => (prev === "Title" ? "BookID" : "Title")); 
   };
   return (
     <>
@@ -62,9 +70,12 @@ function BookList() {
           </div>
         </div>
       ))}
+      {/* previous button */}
       <button disabled={pageNum === 1} onClick={() => setPageNum(pageNum - 1)}>
         Previous
       </button>
+
+      {/* pages buttons */}
       {[...Array(totalPages)].map((_, index) => (
         <button
           key={index + 1}
@@ -74,6 +85,8 @@ function BookList() {
           {index + 1}
         </button>
       ))}
+
+      {/* next button */}
       <button
         disabled={pageNum === totalPages}
         onClick={() => setPageNum(pageNum + 1)}
@@ -81,6 +94,7 @@ function BookList() {
         Next
       </button>
       <br />
+      {/* button to change the number of results */}
       <label>
         Results per page:
         <select
@@ -95,6 +109,7 @@ function BookList() {
           <option value="20">20</option>
         </select>
       </label>
+      {/* button to toggle whether it is sorted or not */}
       <button onClick={toggleSort}>Toggle Sort</button>
     </>
   );
