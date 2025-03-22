@@ -2,8 +2,34 @@
   {
     "ContainingType": "Mission11.API.Controllers.BookController",
     "Method": "Get",
-    "RelativePath": "api/Book",
-    "HttpMethod": "",
+    "RelativePath": "api/Book/GetBooks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageHowMany",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Mission11.API.Data.Book, Mission11.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Mission11.API.Controllers.BookController",
+    "Method": "GetOrdered",
+    "RelativePath": "api/Book/GetOrderedBooks",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
