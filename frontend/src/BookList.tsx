@@ -16,26 +16,27 @@ function BookList() {
     const fetchProjects = async () => {
       // Make a GET request to the API with the current page size, page number, and order by parameters
       const response = await fetch(
-        `http://localhost:5267/api/book/GetBooks?pageHowMany=${pageSize}&pageNum=${pageNum}&orderBy=${orderBy}`,
+        `http://localhost:5000/api/book/GetBooks?pageHowMany=${pageSize}&pageNum=${pageNum}&orderBy=${orderBy}`,
         {
           credentials: "include", // Include credentials (cookies) in the request
         }
       );
       // Parse the JSON response
       const data = await response.json();
+      console.log("API response:", data);
       // Update the state with the fetched books data
       setBooks(data.books);
       // Update the total number of books
       setTotalBooks(data.totalBooks);
       // Calculate and update the total number of pages
-      setTotalPages(Math.ceil(totalBooks / pageSize));
+      setTotalPages(Math.ceil(data.totalBooks / pageSize));
     };
     // Call the fetchProjects function to fetch the data
     fetchProjects();
   }, [pageSize, pageNum, totalBooks, orderBy]); // Re-run this effect whenever pageSize, pageNum, totalBooks, or orderBy changes
   // set function to toggle sort
   const toggleSort = () => {
-    setOrderBy((prev) => (prev === "Title" ? "BookID" : "Title")); 
+    setOrderBy((prev) => (prev === "Title" ? "BookID" : "Title"));
   };
   return (
     <>
