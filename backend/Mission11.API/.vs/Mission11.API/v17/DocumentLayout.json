@@ -7,20 +7,24 @@
       "RelativeMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|c:\\users\\daner\\onedrive\\documents\\is 413 enterprise application development\\mission11jenkins\\backend\\mission11.api\\data\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|solutionrelative:data\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|c:\\users\\daner\\onedrive\\documents\\is 413 enterprise application development\\mission11jenkins\\backend\\mission11.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|c:\\users\\daner\\onedrive\\documents\\is 413 enterprise application development\\mission11jenkins\\backend\\mission11.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|c:\\users\\daner\\onedrive\\documents\\is 413 enterprise application development\\mission11jenkins\\backend\\mission11.api\\data\\bookscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|solutionrelative:data\\bookscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|c:\\users\\daner\\onedrive\\documents\\is 413 enterprise application development\\mission11jenkins\\backend\\mission11.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|c:\\users\\daner\\onedrive\\documents\\is 413 enterprise application development\\mission11jenkins\\backend\\mission11.api\\data\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|solutionrelative:data\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|c:\\users\\daner\\onedrive\\documents\\is 413 enterprise application development\\mission11jenkins\\backend\\mission11.api\\data\\bookscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAEA9F71-6FCA-4D91-AE01-97F86776E9CD}|Mission11.API.csproj|solutionrelative:data\\bookscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,15 +54,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\daner\\OneDrive\\Documents\\IS 413 Enterprise Application Development\\Mission11Jenkins\\backend\\Mission11.API\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\daner\\OneDrive\\Documents\\IS 413 Enterprise Application Development\\Mission11Jenkins\\backend\\Mission11.API\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAswCQAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T20:24:09.59Z",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\daner\\OneDrive\\Documents\\IS 413 Enterprise Application Development\\Mission11Jenkins\\backend\\Mission11.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\daner\\OneDrive\\Documents\\IS 413 Enterprise Application Development\\Mission11Jenkins\\backend\\Mission11.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-26T00:44:25.887Z",
               "EditorCaption": ""
             },
             {
@@ -69,27 +73,27 @@
               "RelativeDocumentMoniker": "Controllers\\BookController.cs",
               "ToolTip": "C:\\Users\\daner\\OneDrive\\Documents\\IS 413 Enterprise Application Development\\Mission11Jenkins\\backend\\Mission11.API\\Controllers\\BookController.cs",
               "RelativeToolTip": "Controllers\\BookController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwC8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAswBsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T20:29:30.15Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BooksContext.cs",
-              "DocumentMoniker": "C:\\Users\\daner\\OneDrive\\Documents\\IS 413 Enterprise Application Development\\Mission11Jenkins\\backend\\Mission11.API\\Data\\BooksContext.cs",
-              "RelativeDocumentMoniker": "Data\\BooksContext.cs",
-              "ToolTip": "C:\\Users\\daner\\OneDrive\\Documents\\IS 413 Enterprise Application Development\\Mission11Jenkins\\backend\\Mission11.API\\Data\\BooksContext.cs",
-              "RelativeToolTip": "Data\\BooksContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\daner\\OneDrive\\Documents\\IS 413 Enterprise Application Development\\Mission11Jenkins\\backend\\Mission11.API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\daner\\OneDrive\\Documents\\IS 413 Enterprise Application Development\\Mission11Jenkins\\backend\\Mission11.API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T20:20:36.076Z",
+              "WhenOpened": "2025-03-19T20:24:09.59Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\daner\\OneDrive\\Documents\\IS 413 Enterprise Application Development\\Mission11Jenkins\\backend\\Mission11.API\\Data\\Book.cs",
               "RelativeDocumentMoniker": "Data\\Book.cs",
@@ -97,12 +101,11 @@
               "RelativeToolTip": "Data\\Book.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T20:17:46.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T20:17:46.11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\daner\\OneDrive\\Documents\\IS 413 Enterprise Application Development\\Mission11Jenkins\\backend\\Mission11.API\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -112,6 +115,18 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-03-19T20:05:35.097Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BooksContext.cs",
+              "DocumentMoniker": "C:\\Users\\daner\\OneDrive\\Documents\\IS 413 Enterprise Application Development\\Mission11Jenkins\\backend\\Mission11.API\\Data\\BooksContext.cs",
+              "RelativeDocumentMoniker": "Data\\BooksContext.cs",
+              "ToolTip": "C:\\Users\\daner\\OneDrive\\Documents\\IS 413 Enterprise Application Development\\Mission11Jenkins\\backend\\Mission11.API\\Data\\BooksContext.cs",
+              "RelativeToolTip": "Data\\BooksContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T20:20:36.076Z"
             }
           ]
         }
