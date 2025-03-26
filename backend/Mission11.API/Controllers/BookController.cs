@@ -16,8 +16,14 @@ namespace Mission11.API.Controllers
             _context = context;
         }
         [HttpGet("GetBooks")]
-        public IActionResult Get(int pageHowMany, int pageNum, string orderBy)
+        public IActionResult Get(int pageHowMany, int pageNum, string orderBy, [FromQuery] List<string>? bookCategories = null)
         {
+            var query =_context.Books.AsQueryable();
+
+            if (bookCategories != null && bookCategories.Any())
+            {
+                query = query.Where(b => bookCategories.Contains(b.Category));
+            }
             //cookies for is 414
             string? favoriteBook = Request.Cookies["favoriteBook"];
             Console.WriteLine("**************Cookie***********\n" + favoriteBook);
@@ -33,7 +39,7 @@ namespace Mission11.API.Controllers
 
             var sortBy = string.IsNullOrEmpty(orderBy) ? "BookID" : orderBy;
             //get the books from the database
-            var results = _context.Books
+            var results = query
                 .OrderBy(sortBy)
                 .Skip((pageNum - 1) * pageHowMany)
                 .Take(pageHowMany)
@@ -42,9 +48,20 @@ namespace Mission11.API.Controllers
             var allResults = new
             {
                 books = results,
-                totalBooks = _context.Books.Count()
+                totalBooks = query.Count()
             };
             return Ok(allResults);
         }
+        [HttpGet("GetCategories")]
+        public IActionResult GetCategories()
+        {
+            //get the categories from the database
+            var results = _context.Books
+                .Select(b => b.Category)
+                .Distinct()
+                .ToList();
+            //return the categories
+            return Ok(results);
+        }   
     }
 }
