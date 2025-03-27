@@ -1,26 +1,23 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import BookList from "./BookList";
-import CookieConsent from "react-cookie-consent";
-import Fingerprint from "./fingerprint";
+import AddToCart from "./pages/AddToCart";
+import BooksPage from "./pages/BooksPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CartPage from "./pages/CartPage";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <BookList />
-      <CookieConsent
-        location="bottom"
-        buttonText="Accept"
-        style={{ background: "#2B373B", zIndex: 9999 }}
-        buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
-      >
-        This website uses cookies to enhance the user experience.
-      </CookieConsent>
-      <Fingerprint />
+      <CartProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<BooksPage />} />
+            <Route path="/books" element={<BooksPage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/addToCart/:title/:bookId/:price" element={<AddToCart />} />
+          </Routes>
+        </Router>
+      </CartProvider>
     </>
   );
 }

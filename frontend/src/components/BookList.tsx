@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Book } from "./Book";
+import { Book } from "../types/Book";
+import { useNavigate } from "react-router-dom";
 
-function BookList() {
+function BookList({ selectedCategories }: { selectedCategories: string[] }) {
   //set the variables
   const [books, setBooks] = useState<Book[]>([]);
   const [pageSize, setPageSize] = useState<number>(5);
@@ -10,13 +11,17 @@ function BookList() {
   const [totalPages, setTotalPages] = useState<number>(0);
   // default the order by to book id
   const [orderBy, setOrderBy] = useState<string>("BookID");
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Define an asynchronous function to fetch the books data from the API
     const fetchProjects = async () => {
+      const categoryParams = selectedCategories
+        .map((cat) => `bookCategories=${encodeURIComponent(cat)}`)
+        .join("&");
       // Make a GET request to the API with the current page size, page number, and order by parameters
       const response = await fetch(
-        `http://localhost:5000/api/book/GetBooks?pageHowMany=${pageSize}&pageNum=${pageNum}&orderBy=${orderBy}`,
+        `http://localhost:5000/api/book/GetBooks?pageHowMany=${pageSize}&pageNum=${pageNum}&orderBy=${orderBy}${selectedCategories.length ? `&${categoryParams}` : ""}`,
         {
           credentials: "include", // Include credentials (cookies) in the request
         }
@@ -33,7 +38,7 @@ function BookList() {
     };
     // Call the fetchProjects function to fetch the data
     fetchProjects();
-  }, [pageSize, pageNum, totalBooks, orderBy]); // Re-run this effect whenever pageSize, pageNum, totalBooks, or orderBy changes
+  }, [pageSize, pageNum, totalBooks, orderBy, selectedCategories]); // Re-run this effect whenever pageSize, pageNum, totalBooks, or orderBy changes
   // set function to toggle sort
   const toggleSort = () => {
     setOrderBy((prev) => (prev === "Title" ? "BookID" : "Title"));
@@ -68,6 +73,8 @@ function BookList() {
                 <strong>Price:</strong> {b.price}
               </li>
             </ul>
+            <button className="btn btn-success"
+             onClick={() => navigate(`/addToCart/${b.title}/${b.bookID}/${b.price}`)}>Add to Cart</button>
           </div>
         </div>
       ))}
