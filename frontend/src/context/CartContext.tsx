@@ -1,10 +1,4 @@
-import {
-  Children,
-  createContext,
-  ReactNode,
-  useContext,
-  useState,
-} from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 import { CartItem } from "../types/CartItem";
 
 interface CartContextType {
@@ -22,7 +16,9 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     setCart((prevCart) => {
       const existingItem = prevCart.find((c) => c.bookId === item.bookId);
       const updatedCart = prevCart.map((c) =>
-        c.bookId === item.bookId ? { ...c, quantity: c.quantity + item.quantity } : c
+        c.bookId === item.bookId
+          ? { ...c, quantity: c.quantity + item.quantity }
+          : c
       );
       return existingItem ? updatedCart : [...prevCart, item];
     });

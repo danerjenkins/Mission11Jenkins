@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/f542ed9e-d13a-4380-8836-d5f98ac85cba/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/BookProject",
+  "appService.deploySubpath": "backend\\Mission11.API\\publish"
+}

@@ -42,6 +42,7 @@ function BookList({ selectedCategories }: { selectedCategories: string[] }) {
     loadBooks();
   }, [pageSize, pageNum, orderBy, selectedCategories]); // Re-run this effect whenever pageSize, pageNum, totalBooks, or orderBy changes
   if (loading) return <p>Loading books...</p>;
+  if (error) return <p>Error: {error}</p>;
   return (
     <>
       <div className="container mt-4">
@@ -89,14 +90,15 @@ function BookList({ selectedCategories }: { selectedCategories: string[] }) {
             </div>
           ))}
         </div>
-        <Pagination 
-          pageNum={pageNum} 
-          totalPages={totalPages} 
+        <Pagination
+          pageNum={pageNum}
+          totalPages={totalPages}
           pageSize={pageSize}
           orderBy={orderBy}
           setPageNum={setPageNum}
           setPageSize={setPageSize}
-          setOrderBy={setOrderBy}/>
+          setOrderBy={setOrderBy}
+        />
       </div>
     </>
   );

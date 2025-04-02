@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Query;
 using Mission11.API.Data;
 using System.Linq.Dynamic.Core;
 
@@ -62,6 +63,50 @@ namespace Mission11.API.Controllers
                 .ToList();
             //return the categories
             return Ok(results);
-        }   
+        }
+        [HttpPost("AddBook")]
+        public IActionResult AddBook([FromBody] Book newBook)
+        {
+            //add the book to the database
+            _context.Books.Add(newBook);
+            _context.SaveChanges();
+            //return the book
+            return Ok(newBook);
+        }
+        [HttpPut("UpdateBook/{bookID}")]
+        public IActionResult UpdateBook(int bookID, [FromBody] Book updatedBook)
+        {
+            //get the book from the database
+            var book = _context.Books.Find(bookID);
+            //update the book
+            book.Title = updatedBook.Title;
+            book.Author = updatedBook.Author;
+            book.Publisher = updatedBook.Publisher;
+            book.ISBN = updatedBook.ISBN;
+            book.Classification = updatedBook.Classification;
+            book.Category = updatedBook.Category;
+            book.PageCount = updatedBook.PageCount;
+            book.Price = updatedBook.Price;
+            //save the changes
+            _context.SaveChanges();
+            //return the book
+            return Ok(book);
+        }
+        [HttpDelete("DeleteBook/{bookID}")]
+        public IActionResult DeleteBook(int bookID)
+        {
+            //get the book from the database
+            var book = _context.Books.Find(bookID);
+            if (book == null)
+            {
+                return NotFound(new { message = "Book not found" });
+            }
+            //remove the book
+            _context.Books.Remove(book);
+            //save the changes
+            _context.SaveChanges();
+            //return the book
+            return Ok(book);
+        }
     }
 }

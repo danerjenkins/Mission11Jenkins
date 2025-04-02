@@ -5,7 +5,7 @@ interface FetchBooksResponse {
   totalBooks: number;
 }
 
-const API_URL = "http://localhost:5000/api/book";
+const API_URL = "https://bookproject.azurewebsites.net/api/Book";
 export const fetchBooks = async (
   pageSize: number,
   pageNum: number,
@@ -52,7 +52,10 @@ export const addBook = async (newBook: Book): Promise<Book> => {
   }
 };
 
-export const updateBook = async (bookID: number, updatedBook: Book): Promise<Book> => {
+export const updateBook = async (
+  bookID: number,
+  updatedBook: Book
+): Promise<Book> => {
   try {
     const response = await fetch(`${API_URL}/UpdateBook/${bookID}`, {
       method: "PUT",
@@ -70,8 +73,8 @@ export const updateBook = async (bookID: number, updatedBook: Book): Promise<Boo
     throw error;
   }
 };
-export const deleteBook = async (bookID: number ): Promise<void> =>  {
-  try{
+export const deleteBook = async (bookID: number): Promise<void> => {
+  try {
     const response = await fetch(`${API_URL}/DeleteBook/${bookID}`, {
       method: "DELETE",
     });
@@ -83,4 +86,4 @@ export const deleteBook = async (bookID: number ): Promise<void> =>  {
     console.error("Error deleting project", error);
     throw error;
   }
-}
+};
