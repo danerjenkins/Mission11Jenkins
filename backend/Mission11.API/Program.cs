@@ -15,7 +15,7 @@ builder.Services.AddCors(options =>
 
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000")
+            policy.WithOrigins("https://agreeable-sky-0c367251e.6.azurestaticapps.net/")
                 .AllowCredentials()
                 .AllowAnyHeader()
                 .AllowAnyMethod();
