@@ -18,10 +18,7 @@ export const fetchBooks = async (
       .join("&");
     // Make a GET request to the API with the current page size, page number, and order by parameters
     const response = await fetch(
-      `${API_URL}/GetBooks?pageHowMany=${pageSize}&pageNum=${pageNum}&orderBy=${orderBy}${selectedCategories.length ? `&${categoryParams}` : ""}`,
-      {
-        credentials: "include", // Include credentials (cookies) in the request
-      }
+      `${API_URL}/GetBooks?pageHowMany=${pageSize}&pageNum=${pageNum}&orderBy=${orderBy}${selectedCategories.length ? `&${categoryParams}` : ""}`
     );
     if (!response.ok) {
       throw new Error("Failed to fetch books");

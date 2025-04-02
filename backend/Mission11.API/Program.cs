@@ -15,8 +15,7 @@ builder.Services.AddCors(options =>
 
         policy =>
         {
-            policy.WithOrigins("https://agreeable-sky-0c367251e.6.azurestaticapps.net/")
-                .AllowCredentials()
+            policy.AllowAnyOrigin()
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
